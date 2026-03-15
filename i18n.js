@@ -68,7 +68,7 @@ const i18n = {
             footer_features: "Features",
             footer_about: "About",
             footer_contact: "Contact",
-            footer_copyright: "© 2025 Monster Survivors Online. All rights reserved.",
+            footer_copyright: "© 2026 Monster Survivors Online. All rights reserved.",
             footer_privacy: "Privacy Policy",
             footer_terms: "Terms of Service",
             
@@ -122,7 +122,7 @@ const i18n = {
             footer_features: "特色",
             footer_about: "关于",
             footer_contact: "联系我们",
-            footer_copyright: "© 2025 怪物幸存者在线。保留所有权利。",
+            footer_copyright: "© 2026 怪物幸存者在线。保留所有权利。",
             footer_privacy: "隐私政策",
             footer_terms: "服务条款",
             
@@ -175,7 +175,7 @@ const i18n = {
             footer_features: "特徴",
             footer_about: "概要",
             footer_contact: "お問い合わせ",
-            footer_copyright: "© 2025 モンスターサバイバーズオンライン。全著作権所有。",
+            footer_copyright: "© 2026 モンスターサバイバーズオンライン。全著作権所有。",
             footer_privacy: "プライバシーポリシー",
             footer_terms: "利用規約",
             
@@ -228,7 +228,7 @@ const i18n = {
             footer_features: "Características",
             footer_about: "Acerca de",
             footer_contact: "Contacto",
-            footer_copyright: "© 2025 Monster Survivors Online. Todos los derechos reservados.",
+            footer_copyright: "© 2026 Monster Survivors Online. Todos los derechos reservados.",
             footer_privacy: "Política de Privacidad",
             footer_terms: "Términos de Servicio",
             
@@ -281,7 +281,7 @@ const i18n = {
             footer_features: "Caractéristiques",
             footer_about: "À Propos",
             footer_contact: "Contact",
-            footer_copyright: "© 2025 Monster Survivors Online. Tous droits réservés.",
+            footer_copyright: "© 2026 Monster Survivors Online. Tous droits réservés.",
             footer_privacy: "Politique de Confidentialité",
             footer_terms: "Conditions d'Utilisation",
             
@@ -334,7 +334,7 @@ const i18n = {
             footer_features: "Funktionen",
             footer_about: "Über",
             footer_contact: "Kontakt",
-            footer_copyright: "© 2025 Monster Survivors Online. Alle Rechte vorbehalten.",
+            footer_copyright: "© 2026 Monster Survivors Online. Alle Rechte vorbehalten.",
             footer_privacy: "Datenschutzrichtlinie",
             footer_terms: "Nutzungsbedingungen",
             
