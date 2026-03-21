@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FAQ & Common Questions - Monster Survivors</title>
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="FAQ & Common Questions - Monster Survivors">
+    <meta name="description" content="Find answers to frequently asked questions about Monster Survivors. Learn about controls, gameplay mechanics, strategies, and common solutions to player questions.">
+    <meta name="keywords" content="Monster Survivors FAQ, common questions, help, game mechanics, troubleshooting, player support">
+    <meta name="author" content="Monster Survivors Online">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://monster-survivor.online/blog/faq-common-questions.html">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://monster-survivor.online/blog/faq-common-questions.html">
+    <meta property="og:title" content="FAQ & Common Questions - Monster Survivors">
+    <meta property="og:description" content="Find answers to frequently asked questions about Monster Survivors.">
+    <meta property="og:image" content="https://monster-survivor.online/og-image.svg">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FAQ & Common Questions">
+    <meta name="twitter:description" content="Find answers to frequently asked questions about Monster Survivors.">
+    <meta name="twitter:image" content="https://monster-survivor.online/og-image.svg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: #1d1d1f;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #007aff;
+            text-decoration: none;
+        }
+
+        .home-link {
+            color: #1d1d1f;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .home-link:hover { color: #007aff; }
+
+        /* Blog Header */
+        .blog-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .blog-tag {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        /* Article Content */
+        .article {
+            background: white;
+            max-width: 800px;
+            margin: -30px auto 60px;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .article-meta {
+            color: #6e6e73;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        .article-meta span {
+            margin-right: 20px;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            margin-bottom: 30px;
+            color: #1d1d1f;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 40px 0 20px;
+            color: #1d1d1f;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 17px;
+        }
+
+        strong { color: #007aff; }
+
+        /* FAQ Item */
+        .faq-item {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .faq-question {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .faq-question::before {
+            content: '?';
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .faq-answer {
+            color: #2d3748;
+            line-height: 1.8;
+        }
+
+        /* Category Label */
+        .category-label {
+            display: inline-block;
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        /* CTA Box */
+        .cta-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: transform 0.3s;
+        }
+
+        .cta-button:hover { transform: scale(1.05); }
+
+        /* Footer */
+        footer {
+            background: #1d1d1f;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: #a1a1a6;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover { color: white; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .article {
+                margin: 0 20px 40px;
+                padding: 30px 20px;
+            }
+
+            h1 { font-size: 1.8rem; }
+            h2 { font-size: 1.5rem; }
+
+            .faq-question {
+                font-size: 1.1rem;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">Monster Survivors</a>
+                <a href="/" class="home-link">← Back to Home</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Blog Header -->
+    <div class="blog-header">
+        <div class="container">
+            <span class="blog-tag">❓ FAQ</span>
+        </div>
+    </div>
+
+    <!-- Article Content -->
+    <article class="article">
+        <div class="article-meta">
+            <span>📅 March 21, 2026</span>
+            <span>👁️ 6 min read</span>
+            <span>🏷️ Help</span>
+        </div>
+
+        <h1>FAQ & Common Questions: Everything You Need to Know</h1>
+
+        <p>Welcome to our comprehensive FAQ page! We've compiled answers to the most frequently asked questions about Monster Survivors. Whether you're troubleshooting issues, looking for gameplay tips, or just curious about game mechanics, you'll find helpful information below.</p>
+
+        <h2>Gameplay Questions</h2>
+
+        <div class="faq-item">
+            <span class="category-label">Gameplay</span>
+            <div class="faq-question">How do I control my character in Monster Survivors?</div>
+            <div class="faq-answer">
+                <p>Use the <strong>WASD keys</strong> or <strong>arrow keys</strong> to move your character around the battlefield. Your mouse cursor determines which direction your character faces. The best part? Your weapons <strong>automatically target and fire</strong> at nearby enemies, so you can focus entirely on movement and positioning!</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <span class="category-label">Gameplay</span>
+            <div class="faq-question">How do I level up and get stronger?</div>
+            <div class="faq-answer">
+                <p>Defeat monsters to collect <strong>experience gems</strong> that drop throughout the battlefield. As you collect these gems, your experience bar fills. When it reaches full, you level up! At each level-up, you'll be presented with upgrade choices that significantly enhance your character's abilities.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <span class="category-label">Gameplay</span>
+            <div class="faq-question">What's the best strategy for surviving longer?</div>
+            <div class="faq-answer">
+                <p>The golden rule of Monster Survivors is <strong>never stop moving</strong>. Constant movement keeps you from being surrounded by enemies. Additionally, prioritize area damage weapons early in the game, collect every experience gem you can safely reach, and learn to read enemy attack patterns to dodge effectively.</p>
+            </div>
+        </div>
+
+        <h2>Technical Questions</h2>
+
+        <div class="faq-item">
+            <span class="category-label">Technical</span>
+            <div class="faq-question">Is Monster Survivors free to play?</div>
+            <div class="faq-answer">
+                <p>Yes! Monster Survivors is <strong>completely free to play</strong> in your web browser. No download, no registration, and no payment required. Simply visit the website and start playing instantly!</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <span class="category-label">Technical</span>
+            <div class="faq-question">What devices and browsers can I play Monster Survivors on?</div>
+            <div class="faq-answer">
+                <p>Monster Survivors runs on <strong>any modern web browser</strong> including Chrome, Firefox, Safari, and Edge. It works on desktop computers (Windows, Mac, Linux) and mobile devices (iOS, Android). For the best experience, ensure your browser and operating system are up to date.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <span class="category-label">Technical</span>
+            <div class="faq-question">The game is lagging or running slowly. What can I do?</div>
+            <div class="faq-answer">
+                <p>If you're experiencing performance issues, try these solutions:</p>
+                <ul>
+                    <li>Close other browser tabs and applications that might be using system resources</li>
+                    <li>Lower your browser's graphics quality settings if available</li>
+                    <li>Ensure your browser and graphics drivers are updated</li>
+                    <li>Try a different browser—some perform better than others depending on your system</li>
+                    <li>Check your internet connection, as Monster Survivors requires an active connection</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>Progression & Features</h2>
+
+        <div class="faq-item">
+            <span class="category-label">Progression</span>
+            <div class="faq-question">Does my progress save between sessions?</div>
+            <div class="faq-answer">
+                <p>Monster Survivors is a roguelike game, which means <strong>each run starts fresh</strong>. However, the game may track your high scores and achievements. The roguelike nature ensures that every playthrough offers a unique experience and encourages experimentation with different builds and strategies.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <span class="category-label">Features</span>
+            <div class="faq-question">Are there different characters to play?</div>
+            <div class="faq-answer">
+                <p>Yes! Monster Survivors features multiple unique characters, each with distinct starting stats, abilities, and preferred weapon types. Characters include The Warrior (balanced fighter), The Ranger (precision striker), and The Speedster (swift survivor), among others. Experiment with different characters to find your favorite playstyle!</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <span class="category-label">Features</span>
+            <div class="faq-question">How many weapons are available in the game?</div>
+            <div class="faq-answer">
+                <p>Monster Survivors features <strong>15+ unique weapons</strong> that can be upgraded through multiple tiers. These include projectile weapons like Blaster, area damage weapons like Explosion Sphere, melee options, status effect weapons, and utility options. Each weapon offers distinct playstyles and synergies to discover!</p>
+            </div>
+        </div>
+
+        <h2>Boss & Difficulty</h2>
+
+        <div class="faq-item">
+            <span class="category-label">Difficulty</span>
+            <div class="faq-question">When do bosses appear in the game?</div>
+            <div class="faq-answer">
+                <p>Boss encounters occur at regular intervals, typically every 5 waves. Bosses include The Swarm Lord (Wave 5), The Flame Golem (Wave 10), The Shadow Assassin (Wave 15), and more challenging bosses at higher waves. Each boss has unique attack patterns and requires specific strategies to defeat.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <span class="category-label">Difficulty</span>
+            <div class="faq-question">Does the game get harder over time?</div>
+            <div class="faq-answer">
+                <p>Yes! Monster Survivors features <strong>progressive difficulty</strong>. Each wave brings stronger and more numerous enemies. Monster types evolve, new enemy varieties appear, and the challenge increases continuously. Your upgrades and improved skills are essential for keeping up with the escalating difficulty!</p>
+            </div>
+        </div>
+
+        <h2>Mobile & Controls</h2>
+
+        <div class="faq-item">
+            <span class="category-label">Mobile</span>
+            <div class="faq-question">Can I play Monster Survivors on mobile devices?</div>
+            <div class="faq-answer">
+                <p>Absolutely! Monster Survivors is <strong>fully playable on mobile devices</strong>. The game features touch controls optimized for smartphones and tablets. Simply use the virtual joystick on your screen to move your character. The game adapts seamlessly to both desktop and mobile platforms.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <span class="category-label">Controls</span>
+            <div class="faq-question">Can I customize the controls?</div>
+            <div class="faq-answer">
+                <p>Currently, Monster Survivors uses fixed control schemes optimized for gameplay balance. On desktop, you can use either WASD or arrow keys for movement. On mobile, the virtual joystick provides intuitive touch controls. We're always listening to feedback, so suggestions for control customization are welcome!</p>
+            </div>
+        </div>
+
+        <h2>Still Have Questions?</h2>
+
+        <p>If you didn't find an answer to your question in this FAQ, we'd love to help! Contact our support team directly at contact@monster-survivor.online with your question or concern. Please include as much detail as possible, including:</p>
+
+        <ul>
+            <li>Your browser type and version</li>
+            <li>Your operating system (Windows, Mac, iOS, Android, etc.)</li>
+            <li>Specific details about the issue or question</li>
+            <li>Screenshots or error messages if applicable</li>
+        </ul>
+
+        <p>We aim to respond to all inquiries within 24-48 hours during business days. Your feedback also helps us improve the game for everyone!</p>
+
+        <div class="cta-box">
+            <h3>Ready to Start Playing?</h3>
+            <p>Now that you have all the answers, jump into the game and start surviving!</p>
+            <a href="/" class="cta-button">Play Monster Survivors Now</a>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="/">Play Game</a>
+                <a href="/blog/">Blog Home</a>
+                <a href="mailto:contact@monster-survivor.online">Contact</a>
+            </div>
+            <p style="color: #a1a1a6;">© 2026 Monster Survivors Online. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Beginner's Guide - Monster Survivors</title>
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Beginner's Guide - Monster Survivors">
+    <meta name="description" content="New to Monster Survivors? This beginner's guide teaches you everything you need to know to start your survival journey. Learn controls, basics, and first strategies.">
+    <meta name="keywords" content="Monster Survivors beginner guide, how to play, getting started, tutorial, basics, new player guide">
+    <meta name="author" content="Monster Survivors Online">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://monster-survivor.online/blog/beginners-guide.html">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://monster-survivor.online/blog/beginners-guide.html">
+    <meta property="og:title" content="Beginner's Guide - Monster Survivors">
+    <meta property="og:description" content="New to Monster Survivors? This beginner's guide teaches you everything you need to know.">
+    <meta property="og:image" content="https://monster-survivor.online/og-image.svg">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Beginner's Guide">
+    <meta name="twitter:description" content="New to Monster Survivors? This beginner's guide teaches you everything you need to know.">
+    <meta name="twitter:image" content="https://monster-survivor.online/og-image.svg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: #1d1d1f;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #007aff;
+            text-decoration: none;
+        }
+
+        .home-link {
+            color: #1d1d1f;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .home-link:hover { color: #007aff; }
+
+        /* Blog Header */
+        .blog-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .blog-tag {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        /* Article Content */
+        .article {
+            background: white;
+            max-width: 800px;
+            margin: -30px auto 60px;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .article-meta {
+            color: #6e6e73;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        .article-meta span {
+            margin-right: 20px;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            margin-bottom: 30px;
+            color: #1d1d1f;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 40px 0 20px;
+            color: #1d1d1f;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 30px 0 15px;
+            color: #1d1d1f;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 17px;
+        }
+
+        ul, ol {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+
+        strong { color: #007aff; }
+
+        /* Control Box */
+        .control-box {
+            background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            color: white;
+        }
+
+        .control-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .control-item:last-child { margin-bottom: 0; }
+
+        .control-key {
+            background: rgba(255, 255, 255, 0.3);
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 1.1rem;
+            min-width: 80px;
+            text-align: center;
+        }
+
+        .control-desc { font-size: 15px; }
+
+        /* Step Box */
+        .step-box {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .step-number {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* CTA Box */
+        .cta-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: transform 0.3s;
+        }
+
+        .cta-button:hover { transform: scale(1.05); }
+
+        /* Footer */
+        footer {
+            background: #1d1d1f;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: #a1a1a6;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover { color: white; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .article {
+                margin: 0 20px 40px;
+                padding: 30px 20px;
+            }
+
+            h1 { font-size: 1.8rem; }
+            h2 { font-size: 1.5rem; }
+
+            .control-item {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">Monster Survivors</a>
+                <a href="/" class="home-link">← Back to Home</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Blog Header -->
+    <div class="blog-header">
+        <div class="container">
+            <span class="blog-tag">🌟 Getting Started</span>
+        </div>
+    </div>
+
+    <!-- Article Content -->
+    <article class="article">
+        <div class="article-meta">
+            <span>📅 March 21, 2026</span>
+            <span>👁️ 5 min read</span>
+            <span>🏷️ Tutorial</span>
+        </div>
+
+        <h1>Beginner's Guide: Start Your Monster Survivors Journey</h1>
+
+        <p>Welcome to Monster Survivors, the thrilling survival game that challenges you to battle endless waves of monsters! If you're new to the game, this guide will walk you through everything you need to know to get started. We'll cover controls, basic mechanics, and essential strategies to help you survive your first encounters with the monster hordes.</p>
+
+        <h2>Understanding the Game Concept</h2>
+
+        <p>Monster Survivors is a roguelike survival game where your goal is simple but challenging: survive as long as possible against increasingly difficult waves of monsters. Unlike traditional action games, you don't manually aim and shoot—your weapons automatically target nearby enemies. This allows you to focus entirely on movement, positioning, and strategic upgrade choices.</p>
+
+        <p>Each playthrough is unique thanks to the roguelike elements. You'll collect experience gems by defeating monsters, level up, choose upgrades, and progressively become more powerful. When you fall, you start fresh—but the knowledge and experience you gain will help you survive longer in future runs.</p>
+
+        <h2>Basic Controls</h2>
+
+        <p>Monster Survivors features simple, intuitive controls that make it easy to jump right into the action. Mastering these controls is your first step toward survival.</p>
+
+        <div class="control-box">
+            <div class="control-item">
+                <span class="control-key">W / ↑</span>
+                <span class="control-desc">Move your character upward</span>
+            </div>
+            <div class="control-item">
+                <span class="control-key">S / ↓</span>
+                <span class="control-desc">Move your character downward</span>
+            </div>
+            <div class="control-item">
+                <span class="control-key">A / ←</span>
+                <span class="control-desc">Move your character left</span>
+            </div>
+            <div class="control-item">
+                <span class="control-key">D / →</span>
+                <span class="control-desc">Move your character right</span>
+            </div>
+            <div class="control-item">
+                <span class="control-key">Mouse</span>
+                <span class="control-desc">Your character faces the cursor direction; weapons auto-aim</span>
+            </div>
+        </div>
+
+        <h2>Getting Started: Your First Run</h2>
+
+        <p>When you start your first game, you'll appear in the center of a battlefield. Waves of monsters will begin spawning and moving toward your position. Your weapons will automatically fire at the nearest enemies. Here's what to focus on during your first runs:</p>
+
+        <div class="step-box">
+            <h3>Step 1: Get Moving</h3>
+            <p>Never stand still! Constant movement is your primary defense. Use the WASD or arrow keys to move around the battlefield. Keep moving in circular patterns to prevent enemies from surrounding you.</p>
+        </div>
+
+        <div class="step-box">
+            <h3>Step 2: Collect Experience Gems</h3>
+            <p>When you defeat enemies, they drop experience gems. These gems are magnetic—they'll move toward you when you're close enough. Collecting gems fills your experience bar. When the bar fills completely, you'll level up!</p>
+        </div>
+
+        <div class="step-box">
+            <h3>Step 3: Choose Your Upgrades</h3>
+            <p>Every time you level up, you'll be presented with upgrade choices. These are crucial decisions that shape your character's build. For beginners, start with weapons that deal area damage—they'll help you clear large groups of enemies quickly.</p>
+        </div>
+
+        <div class="step-box">
+            <h3>Step 4: Survive the Waves</h3>
+            <p>Each wave brings stronger and more numerous enemies. The difficulty increases progressively, so survival becomes increasingly challenging. Your goal is to survive as long as possible and achieve the highest score.</p>
+        </div>
+
+        <h2>Understanding the Interface</h2>
+
+        <p>The game interface provides essential information to help you make informed decisions. Here's what each element means:</p>
+
+        <ul>
+            <li><strong>Health Bar</strong> – Shows your current health. When it reaches zero, the run ends.</li>
+            <li><strong>Experience Bar</strong> – Fills as you collect gems. When full, you level up.</li>
+            <li><strong>Score</strong> – Your total points for the current run.</li>
+            <li><strong>Wave Counter</strong> – Shows the current wave number.</li>
+            <li><strong>Timer</strong> – How long you've survived in this run.</li>
+        </ul>
+
+        <h2>First Upgrade Choices</h2>
+
+        <p>During your first few runs, you might feel overwhelmed by upgrade choices. Here's a simple strategy for beginners:</p>
+
+        <ol>
+            <li><strong>Start with area damage weapons</strong> – These help clear groups of enemies quickly</li>
+            <li><strong>Add attack speed upgrades</strong> – Increases your overall damage output</li>
+            <li><strong>Invest in movement speed</strong> – Essential for dodging and positioning</li>
+            <li><strong>Consider health regeneration</strong> – Helps you stay in the fight longer</li>
+        </ol>
+
+        <h2>Common Beginner Mistakes</h2>
+
+        <p>Avoid these common pitfalls that many new players make:</p>
+
+        <ul>
+            <li><strong>Standing Still</strong> – Movement is your primary defense. Never stop moving.</li>
+            <li><strong>Ignoring Experience Gems</strong> – Every gem counts toward leveling up.</li>
+            <li><strong>Picking Upgrades Randomly</strong> – Think about how upgrades work together.</li>
+            <li><strong>Getting Cornered</strong> – Always maintain space to move around.</li>
+            <li><strong>Focusing on One Enemy Type</strong> – Don't get distracted; prioritize threatening enemies.</li>
+        </ul>
+
+        <h2>Tips for Improvement</h2>
+
+        <p>As you play more, you'll naturally improve. Here are some tips to accelerate your progress:</p>
+
+        <ul>
+            <li><strong>Practice Movement</strong> – Spend time learning how to move effectively around the battlefield</li>
+            <li><strong>Learn Enemy Patterns</strong> – Each enemy type has specific behaviors you can exploit</li>
+            <li><strong>Experiment with Builds</strong> – Try different upgrade combinations to find what works for you</li>
+            <li><strong>Watch Your Health</strong> – Don't take unnecessary risks when health is low</li>
+            <li><strong>Stay Calm</strong> – Panic leads to mistakes; focus on controlled movement</li>
+        </ul>
+
+        <h2>Conclusion</h2>
+
+        <p>Monster Survivors offers an accessible yet deep gameplay experience that rewards both quick thinking and long-term planning. As a beginner, focus on mastering movement and understanding basic upgrade synergies. With practice and experimentation, you'll develop strategies that work for your playstyle and achieve increasingly impressive survival times.</p>
+
+        <p>Remember: every run teaches you something new, whether you survive for one minute or thirty. Embrace the learning process, experiment with different approaches, and most importantly—have fun surviving!</p>
+
+        <div class="cta-box">
+            <h3>Ready to Start Your Journey?</h3>
+            <p>Jump into the game and begin your Monster Survivors adventure!</p>
+            <a href="/" class="cta-button">Play Monster Survivors Now</a>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="/">Play Game</a>
+                <a href="/blog/">Blog Home</a>
+                <a href="mailto:contact@monster-survivor.online">Contact</a>
+            </div>
+            <p style="color: #a1a1a6;">© 2026 Monster Survivors Online. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
