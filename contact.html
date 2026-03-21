@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us - Monster Survivors Online</title>
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Contact Us - Monster Survivors Online">
+    <meta name="description" content="Get in touch with the Monster Survivors Online team. We'd love to hear your feedback, suggestions, and questions.">
+    <meta name="keywords" content="contact us, support, feedback, monster survivors">
+    <meta name="author" content="Monster Survivors Online">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://monster-survivor.online/contact.html">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://monster-survivor.online/contact.html">
+    <meta property="og:title" content="Contact Us - Monster Survivors Online">
+    <meta property="og:description" content="Get in touch with the Monster Survivors Online team.">
+    <meta property="og:image" content="https://monster-survivor.online/og-image.svg">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://monster-survivor.online/contact.html">
+    <meta name="twitter:title" content="Contact Us - Monster Survivors Online">
+    <meta name="twitter:description" content="Get in touch with the Monster Survivors Online team.">
+    <meta name="twitter:image" content="https://monster-survivor.online/og-image.svg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.7;
+            color: #1d1d1f;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #007aff;
+            text-decoration: none;
+        }
+
+        .home-link {
+            color: #1d1d1f;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .home-link:hover { color: #007aff; }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .page-title {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .page-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Content */
+        .content {
+            background: white;
+            margin: -40px auto 40px;
+            padding: 60px 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.15);
+            position: relative;
+            z-index: 10;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #1d1d1f;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            color: #1d1d1f;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        h3:first-child { margin-top: 0; }
+
+        p {
+            margin-bottom: 15px;
+            color: #333;
+            font-size: 1.05rem;
+        }
+
+        a {
+            color: #007aff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .contact-details h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #1d1d1f;
+        }
+
+        .contact-details p {
+            color: #6e6e73;
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+
+        .faq-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+
+        .faq-item h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #1d1d1f;
+        }
+
+        .faq-item p {
+            color: #6e6e73;
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+
+        .info-box {
+            background: #e7f3ff;
+            border-left: 4px solid #007aff;
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 25px 0;
+        }
+
+        .info-box h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #007aff;
+        }
+
+        .info-box p {
+            color: #555;
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+
+        .response-time {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 25px 0;
+        }
+
+        .response-time h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #856404;
+        }
+
+        .response-time p {
+            color: #856404;
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 40px;
+            background: #f0f7ff;
+            border-radius: 15px;
+            margin-top: 40px;
+            grid-column: 1 / -1;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: #1d1d1f;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #a1a1a6;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover { color: white; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .content { padding: 40px 25px; margin: -20px auto 30px; }
+            .page-header { padding: 60px 0; }
+            .contact-grid { grid-template-columns: 1fr; gap: 30px; }
+        }
+
+        @media (max-width: 480px) {
+            .content { padding: 30px 20px; }
+            .page-title { font-size: 2rem; }
+            .footer-links { flex-direction: column; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">Monster Survivors</a>
+                <nav>
+                    <a href="/" class="home-link">← Back to Home</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1 class="page-title">Contact Us</h1>
+            <p class="page-subtitle">We'd love to hear from you! Get in touch with our team.</p>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="container">
+        <div class="content">
+            <div class="contact-grid">
+                <div class="contact-left">
+                    <h2>Get In Touch</h2>
+                    <p class="lead">
+                        Have questions, feedback, or suggestions? We're here to help! Reach out to us through any of the channels below, and we'll get back to you as soon as possible.
+                    </p>
+
+                    <div class="response-time">
+                        <h4>Response Time</h4>
+                        <p>We typically respond to all inquiries within 1-2 business days. For urgent matters, please indicate the urgency in your email subject line.</p>
+                    </div>
+
+                    <h3>Contact Methods</h3>
+
+                    <div class="contact-method">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p><a href="mailto:contact@monster-survivor.online">contact@monster-survivor.online</a></p>
+                            <p>Best for general inquiries, feedback, and questions.</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-icon">🎮</div>
+                        <div class="contact-details">
+                            <h4>Game Support</h4>
+                            <p><a href="mailto:support@monster-survivor.online">support@monster-survivor.online</a></p>
+                            <p>For bug reports, technical issues, and game-related support.</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-icon">🤝</div>
+                        <div class="contact-details">
+                            <h4>Partnerships</h4>
+                            <p><a href="mailto:business@monster-survivor.online">business@monster-survivor.online</a></p>
+                            <p>For collaboration opportunities and business inquiries.</p>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
+                        <h4>What to Include in Your Message</h4>
+                        <p>To help us assist you faster, please include:</p>
+                        <ul style="margin-top: 10px; margin-left: 20px;">
+                            <li>Your name or preferred username</li>
+                            <li>A clear description of your inquiry</li>
+                            <li>Any relevant details or screenshots (for bug reports)</li>
+                            <li>Your preferred contact method for response</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="contact-right">
+                    <h2>Frequently Asked Questions</h2>
+
+                    <div class="faq-item">
+                        <h4>Is Monster Survivors really free to play?</h4>
+                        <p>Yes! Monster Survivors is 100% free to play. No downloads, no registration, and no hidden fees. Just visit our website and start playing!</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>Can I play on mobile devices?</h4>
+                        <p>Absolutely! Our game is optimized for desktop, tablet, and mobile devices. Play anytime, anywhere on any modern web browser.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>How do I report a bug?</h4>
+                        <p>Please send bug reports to <a href="mailto:support@monster-survivor.online">support@monster-survivor.online</a> with details about what happened and any relevant information to help us reproduce the issue.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>Do you accept feature requests?</h4>
+                        <p>Yes! We love hearing from our community. Send your suggestions to <a href="mailto:contact@monster-survivor.online">contact@monster-survivor.online</a>. While we can't implement every idea, we carefully consider all feedback.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>Can I use your game content?</h4>
+                        <p>All game content is protected by copyright. Please contact us at <a href="mailto:business@monster-survivor.online">business@monster-survivor.online</a> for any licensing or partnership inquiries.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>How often is the game updated?</h4>
+                        <p>We regularly release updates with new features, balance changes, and improvements based on player feedback. Check our blog for the latest news!</p>
+                    </div>
+                </div>
+
+                <div class="cta-section">
+                    <h3>Ready to Play?</h3>
+                    <p style="margin: 15px 0 25px;">Jump into the action and start surviving today!</p>
+                    <a href="/#game" class="cta-button">Play Now - It's Free!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/privacy-policy.html">Privacy Policy</a>
+                <a href="/terms-of-service.html">Terms of Service</a>
+                <a href="/cookie-policy.html">Cookie Policy</a>
+                <a href="/about.html">About Us</a>
+                <a href="/contact.html">Contact</a>
+            </div>
+            <p style="color: #a1a1a6;">© 2026 Monster Survivors Online. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

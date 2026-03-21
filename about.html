@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us - Monster Survivors Online</title>
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="About Us - Monster Survivors Online">
+    <meta name="description" content="Learn about Monster Survivors Online, the free browser-based survival game. Discover our mission, team, and commitment to providing the best gaming experience.">
+    <meta name="keywords" content="about us, monster survivors, team, mission, free online game">
+    <meta name="author" content="Monster Survivors Online">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://monster-survivor.online/about.html">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://monster-survivor.online/about.html">
+    <meta property="og:title" content="About Us - Monster Survivors Online">
+    <meta property="og:description" content="Learn about Monster Survivors Online and our mission.">
+    <meta property="og:image" content="https://monster-survivor.online/og-image.svg">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://monster-survivor.online/about.html">
+    <meta name="twitter:title" content="About Us - Monster Survivors Online">
+    <meta name="twitter:description" content="Learn about Monster Survivors Online and our mission.">
+    <meta name="twitter:image" content="https://monster-survivor.online/og-image.svg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.7;
+            color: #1d1d1f;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #007aff;
+            text-decoration: none;
+        }
+
+        .home-link {
+            color: #1d1d1f;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .home-link:hover { color: #007aff; }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .page-title {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .page-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Content */
+        .content {
+            background: white;
+            margin: -40px auto 40px;
+            padding: 60px 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.15);
+            position: relative;
+            z-index: 10;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #1d1d1f;
+            margin-top: 50px;
+            margin-bottom: 25px;
+            font-weight: 700;
+            position: relative;
+        }
+
+        h2:first-of-type { margin-top: 0; }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            color: #1d1d1f;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #333;
+            font-size: 1.05rem;
+        }
+
+        .lead {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .value-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .value-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .value-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #1d1d1f;
+        }
+
+        .value-description {
+            color: #6e6e73;
+            font-size: 0.95rem;
+        }
+
+        .stats-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 50px;
+            border-radius: 15px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 30px;
+        }
+
+        .stat-item {
+            padding: 10px;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 40px;
+            background: #f0f7ff;
+            border-radius: 15px;
+            margin-top: 40px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+        }
+
+        a {
+            color: #007aff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: #1d1d1f;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #a1a1a6;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover { color: white; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .content { padding: 40px 25px; margin: -20px auto 30px; }
+            .page-header { padding: 60px 0; }
+            .values-grid { grid-template-columns: 1fr; }
+            .stats-section { padding: 30px; }
+            .stat-number { font-size: 2.5rem; }
+        }
+
+        @media (max-width: 480px) {
+            .content { padding: 30px 20px; }
+            .page-title { font-size: 2rem; }
+            .footer-links { flex-direction: column; gap: 15px; }
+            .stats-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">Monster Survivors</a>
+                <nav>
+                    <a href="/" class="home-link">← Back to Home</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1 class="page-title">About Us</h1>
+            <p class="page-subtitle">Creating the ultimate free survival gaming experience for players worldwide</p>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="container">
+        <div class="content">
+            <h2>Our Mission</h2>
+            <p class="lead">
+                At Monster Survivors Online, we believe that great gaming should be accessible to everyone. Our mission is to create an engaging, challenging, and fun survival game that players can enjoy anytime, anywhere — completely free of charge.
+            </p>
+            <p>
+                We're passionate about delivering high-quality gameplay experiences that combine fast-paced action with strategic depth. Our team works tirelessly to ensure that every session of Monster Survivors is exciting, rewarding, and keeps you coming back for more.
+            </p>
+
+            <h2>Our Story</h2>
+            <p>
+                Monster Survivors Online was born from a simple idea: what if we could create a survival game that captures the thrill of endless waves of monsters, the satisfaction of character progression, and the excitement of discovering new strategies — all in a browser-based format?
+            </p>
+            <p>
+                Since our launch, we've been committed to continuously improving the game based on player feedback. Every update, every new feature, and every balance adjustment is made with our community in mind.
+            </p>
+
+            <div class="stats-section">
+                <h3 style="color: white; margin-top: 0; margin-bottom: 30px;">Our Impact</h3>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">∞</div>
+                        <div class="stat-label">Waves of Monsters</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">20+</div>
+                        <div class="stat-label">Monster Types</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Weapon Upgrades</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Free to Play</div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Our Values</h2>
+            <p>
+                These core values guide everything we do at Monster Survivors Online:
+            </p>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">🎮</div>
+                    <div class="value-title">Fun First</div>
+                    <div class="value-description">Every decision we make prioritizes creating an enjoyable and engaging gaming experience.</div>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🆓</div>
+                    <div class="value-title">Accessibility</div>
+                    <div class="value-description">Great gaming should be available to everyone, regardless of budget or device.</div>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">👥</div>
+                    <div class="value-title">Community</div>
+                    <div class="value-description">We listen to our players and build the game together with our community.</div>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🚀</div>
+                    <div class="value-title">Innovation</div>
+                    <div class="value-description">We constantly explore new ideas and push the boundaries of browser gaming.</div>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🎯</div>
+                    <div class="value-title">Quality</div>
+                    <div class="value-description">We never compromise on game quality, performance, or player experience.</div>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🌍</div>
+                    <div class="value-title">Global</div>
+                    <div class="value-description">Our game is enjoyed by players from all around the world.</div>
+                </div>
+            </div>
+
+            <h2>What Makes Us Different</h2>
+            <p>
+                Unlike many other online games, Monster Survivors Online is built on a foundation of transparency and player-centric design. Here's what sets us apart:
+            </p>
+            <ul>
+                <li><strong>Truly Free:</strong> No hidden fees, no pay-to-win mechanics, no premium subscriptions</li>
+                <li><strong>No Download Required:</strong> Play directly in your browser on any device</li>
+                <li><strong>Regular Updates:</strong> New content, features, and improvements based on community feedback</li>
+                <li><strong>Responsive Design:</strong> Optimized for desktop, tablet, and mobile devices</li>
+                <li><strong>Cross-Platform:</strong> Your progress syncs across devices</li>
+            </ul>
+
+            <h2>Looking Ahead</h2>
+            <p>
+                We're just getting started. Our roadmap is packed with exciting features, including new game modes, additional characters and weapons, community events, and much more. We're committed to the long-term development of Monster Survivors Online and can't wait to share what's coming next.
+            </p>
+
+            <div class="cta-section">
+                <h3>Ready to Survive?</h3>
+                <p style="margin: 15px 0 25px;">Join thousands of players and start your survival journey today!</p>
+                <a href="/#game" class="cta-button">Play Now - It's Free!</a>
+            </div>
+
+            <h2>Contact Us</h2>
+            <p>
+                We'd love to hear from you! Whether you have feedback, suggestions, bug reports, or just want to say hello, don't hesitate to reach out.
+            </p>
+            <p>
+                <strong>Email:</strong> <a href="mailto:contact@monster-survivor.online">contact@monster-survivor.online</a>
+            </p>
+            <p>
+                <strong>Website:</strong> <a href="https://monster-survivor.online/">https://monster-survivor.online/</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/privacy-policy.html">Privacy Policy</a>
+                <a href="/terms-of-service.html">Terms of Service</a>
+                <a href="/cookie-policy.html">Cookie Policy</a>
+                <a href="/about.html">About Us</a>
+                <a href="/contact.html">Contact</a>
+            </div>
+            <p style="color: #a1a1a6;">© 2026 Monster Survivors Online. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
